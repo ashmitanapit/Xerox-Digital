@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <title>Bootstrap Example</title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -9,6 +10,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
 </head>
 <style>
   .background{
@@ -85,6 +88,7 @@ h2{
     line-height: 30px;
     font-weight: bold;
   border-left: 3px solid #056936;
+  
 }
 .container{
  padding: 0 100px;
@@ -196,26 +200,16 @@ h2{
         <h2 class="section-title">Some of Our Printing Categories:</h2>
       </div>
       <div class="col-md-12">
-        <div class="row">
-          <div class="col-md-2 pic">
-            <img src="images/img11.jpg">
-          </div>
-          <div class="col-md-2 pic">
-            <img src="images/img11.jpg">
-          </div>
-          <div class="col-md-2 pic">
-            <img src="images/img11.jpg">
-          </div>
-          <div class="col-md-2 pic">
-            <img src="images/img11.jpg">
-          </div>
-          <div class="col-md-2 pic">
-            <img src="images/img11.jpg">
-          </div>
-          <div class="col-md-2 pic">
-            <img src="images/img11.jpg">
-          </div>
-        </div>
+        <div class="slides">
+          <div class="carousell owl-carousel">
+            <img src="images/logo.jpg" style="height: 200px" width="200px">
+            <img src="images/img11.jpg" style="height: 200px" width="200px">
+            <img src="images/logo.jpg" style="height: 200px" width="200px">
+            <img src="images/logo.jpg" style="height: 200px" width="200px">
+            <img src="images/logo.jpg" style="height: 200px" width="200px">
+    
+    </div>
+  </div>
       </div>
     </div>
   </div>
@@ -238,6 +232,14 @@ h2{
     </div>
   </div>
   </div>
-  </div>  
+  </div> 
+  <script>
+    $(".carousell").owlCarousel({
+      margin: 10,
+      loop: true,
+      autoplay: true,
+      autoplayTimeout: 700,
+    });
+  </script> 
 </body>
 </html>
